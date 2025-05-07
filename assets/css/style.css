@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-@import url('variables.css');
-=======
 @import url("variables.css");
->>>>>>> 8ff0d38 (adding login and register)
 
 section {
   min-height: 100vh;
@@ -28,18 +24,25 @@ h2 {
 nav {
   z-index: 10;
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   font-family: Oswald, sans-serif;
   font-size: 24px;
   letter-spacing: 3px;
   padding: 25px;
-  width: 100vw;
   background: rgb(255 255 255 / 50%);
-<<<<<<< HEAD
-=======
   height: 70px; /* Fixed height for consistency */
   display: flex;
   align-items: center; /* Center content vertically */
->>>>>>> 8ff0d38 (adding login and register)
+  box-shadow: var(--box-shadow);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 100px; /* Ensure content starts after navbar */
 }
 
 a {
@@ -233,9 +236,6 @@ input:checked + .slider::before {
 .fas {
   font-size: 30px;
   margin-right: 5px;
-<<<<<<< HEAD
-}
-=======
 }
 
 /* Footer Section */
@@ -243,4 +243,12 @@ footer .social-icons .fab {
   font-size: 40px;
   margin: 0 5px;
 }
->>>>>>> 8ff0d38 (adding login and register)
+
+footer {
+  margin-top: auto; /* Push footer to the bottom */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}

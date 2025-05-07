@@ -1,0 +1,90 @@
+#products {
+  padding: 50px;
+  /* background: var(--background); */ /* Removed background */
+  color: var(--on-background);
+  text-align: center;
+}
+
+#products h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 products per row */
+  gap: 20px;
+  justify-items: center;
+}
+
+.product-card {
+  background: var(--background-alt);
+  border: 1px solid var(--secondary-color);
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px; /* Set a fixed height */
+  object-fit: cover; /* Ensure the image scales properly */
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.product-card h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: var(--primary-color);
+}
+
+.product-card p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.product-card .price {
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.product-card .stock {
+  font-size: 0.9rem;
+  color: var(--on-background-alt);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pagination .page-btn {
+  padding: 10px 15px;
+  border: 1px solid var(--secondary-color);
+  background: var(--background-alt);
+  color: var(--on-background);
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.pagination .page-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination .page-btn.active {
+  background: var(--primary-color);
+  color: var(--on-primary);
+}
+
+.pagination .page-btn:hover:not(:disabled) {
+  background: var(--secondary-color);
+  color: var(--on-primary);
+}

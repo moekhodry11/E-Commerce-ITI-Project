@@ -19,70 +19,56 @@ if (savedTheme) {
   }
 }
 
-
 /* get added product form */
-const addProductForm = document.getElementById("add-product-form");
+const addProductForm = document.querySelector(".product-form");
 if (addProductForm) {
-  addProductForm.addEventListener("submit", function (e) {
+  addProductForm.addEventListener("submit", async function (e) {
     e.preventDefault();
-    const productName = document.getElementById("product-name");
-    const productDescription = document.getElementById("product-description");
-    const productPrice = document.getElementById("product-price");
-    const productCategory = document.getElementById("product-category");
-    const productImage = document.getElementById("product-image");
 
-    let isValid = true;
+    const productName = document.getElementById("product-name").value.trim();
+    const productPrice = parseFloat(
+      document.getElementById("product-price").value.trim()
+    );
+    const productStock = parseInt(
+      document.getElementById("product-stock").value.trim()
+    );
+    const productDescription = document
+      .getElementById("product-description")
+      .value.trim();
+    const productImageUrl = document
+      .getElementById("product-image-url")
+      .value.trim();
 
-    // Product Name
-    if (!/^[a-zA-Z0-9 ]{3,}$/.test(productName.value.trim())) {
-      setError(
-        "product-name",
-        "Product name must be at least 3 characters long and can only contain letters, numbers, and spaces."
-      );
-      isValid = false;
-    } else {
-      setSuccess("product-name");
+    // Create product object
+    const newProduct = {
+      productName,
+      price: productPrice,
+      stock: productStock,
+      description: productDescription,
+      imageUrl: productImageUrl,
+      status: "pending", // Default status
+      id: Date.now().toString(), // Generate a unique ID
+    };
+
+    try {
+      // Send product data to db.json (simulated with fetch)
+      const response = await fetch("http://localhost:3000/products", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newProduct),
+      });
+
+      if (response.ok) {
+        alert("Product added successfully!");
+        addProductForm.reset(); // Clear the form
+      } else {
+        alert("Failed to add product. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error adding product:", error);
+      alert("An error occurred. Please try again.");
     }
-    
-    // Product Description
-    if (!/^[a-zA-Z0-9 ]{3,}$/.test(productDescription.value.trim())) {
-      setError(
-        "product-description",
-        "Product description must be at least 3 characters long and can only contain letters, numbers, and spaces."
-      );
-      isValid = false;
-    } else {
-      setSuccess("product-description");
-    }
-    
-    // Product Price
-    if (!/^\d+(\.\d{1,2})?$/.test(productPrice.value.trim())) {
-      setError("product-price", "Invalid price format.");
-      isValid = false;
-    } else {
-      setSuccess("product-price");
-    }
-    
-    // Product Category
-    if (productCategory.value === "") {
-      setError("product-category", "Please select a category.");
-      isValid = false;
-    } else {
-      setSuccess("product-category");
-    }
-    
-    // Product Image
-    if (productImage.files.length === 0) {
-      setError("product-image", "Please upload an image.");
-      isValid = false;
-    } else {
-      setSuccess("product-image");
-    }
-    
-    if (isValid) {
-      // Submit the form or perform any other action
-      alert("Product added successfully!");
-    }
-    }
-  );
+  });
 }

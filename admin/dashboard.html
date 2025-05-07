@@ -1,13 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin</title>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+  <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/admin.css">
 </head>
+
 <body>
-  <h1>Admin Page</h1>
+  <!-- Dark Mode Switch -->
+  <div class="theme-switch-wrapper">
+    <span id="toggle-icon">
+      <span class="toggle-text">Light Mode</span>
+      <i class="fas fa-sun"></i>
+    </span>
+    <label class="theme-switch">
+      <input type="checkbox">
+      <div class="slider round"></div>
+    </label>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="nav">
+    <a href="../index.html">HOME</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <h1>Admin Dashboard</h1>
+    <div class="dashboard-container">
+      <div class="card">
+        <h2>Total Users</h2>
+        <p id="total-users">0</p>
+        <button class="button primary" onclick="location.href='manage-users.html'">Manage Users</button>
+      </div>
+      <div class="card">
+        <h2>Total Products</h2>
+        <p id="total-products">0</p>
+        <button class="button primary" onclick="location.href='manage-products.html'">Manage Products</button>
+      </div>
+      <div class="card">
+        <h2>Total Orders</h2>
+        <p id="total-orders">0</p>
+        <button class="button primary" onclick="location.href='manage-orders.html'">Manage Orders</button>
+      </div>
+    </div>
+  </main>
+  <script src="../assets/js/main.js"></script>
   <script src="../assets/js/admin.js"></script>
 </body>
+
 </html>

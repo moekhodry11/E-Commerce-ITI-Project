@@ -1,13 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+  <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/admin.css">
 </head>
+
 <body>
-  <h1>Admin Page</h1>
+  <!-- Dark Mode Switch -->
+  <div class="theme-switch-wrapper">
+    <span id="toggle-icon">
+      <span class="toggle-text">Light Mode</span>
+      <i class="fas fa-sun"></i>
+    </span>
+    <label class="theme-switch">
+      <input type="checkbox">
+      <div class="slider round"></div>
+    </label>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="nav">
+    <a href="../index.html">HOME</a>
+    <a href="dashboard.html">DASHBOARD</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <h1>Order Management</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Customer</th>
+          <th>Product</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Order rows will be dynamically populated -->
+      </tbody>
+    </table>
+  </main>
+  <script src="../assets/js/main.js"></script>
   <script src="../assets/js/admin.js"></script>
 </body>
+
 </html>
