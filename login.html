@@ -4,11 +4,83 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+<<<<<<< HEAD
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>z
   
   <h1>Login</h1>
   <script src="assets/js/main.js"></script>
+=======
+  <link rel="icon" type="image/png" href="https://s2.googleusercontent.com/s2/favicons?domain=www.jacinto.design">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/forms.css">
+</head>
+<body>
+  
+  <!-- Dark Mode Switch -->
+  <div class="theme-switch-wrapper">
+    <span id="toggle-icon">
+      <span class="toggle-text">Light Mode</span>
+      <i class="fas fa-sun"></i>
+    </span>
+    <label class="theme-switch">
+      <input type="checkbox">
+      <div class="slider round"></div>
+    </label>
+  </div>
+  <!-- Navigation -->
+  <nav id="nav">
+    <a href="index.html">HOME</a>
+    <a href="register.html">REGISTER</a>
+    <a href="login.html">LOGIN</a>
+  </nav>
+  
+  <form id="loginForm">
+    <h2>Login</h2>
+
+    <div class="form-group">
+      <label class="formLable" for="login-email">Email</label>
+      
+      <input class="formInput" type="email" id="login-email" name="email" required />
+      <span class="error" id="login-email-error"></span>
+    </div>
+    <div class="form-group">
+      <label class="formLable" for="login-password">Password</label>
+      <div class="password-wrapper">
+        <input class="formInput" type="password" id="login-password" name="password" required />
+        <i class="fas fa-eye" id="toggle-password"></i>
+      </div>
+      <span class="error" id="login-password-error"></span>
+    </div>
+    <button type="submit" class="primary">Login</button>
+  </form>
+
+  <style>
+    .password-wrapper {
+      position: relative;
+    }
+    .password-wrapper .fa-eye,
+    .password-wrapper .fa-eye-slash {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    document.getElementById('toggle-password').addEventListener('click', function () {
+      const passwordInput = document.getElementById('login-password');
+      const isPassword = passwordInput.type === 'password';
+      passwordInput.type = isPassword ? 'text' : 'password';
+      this.classList.toggle('fa-eye-slash', isPassword);
+      this.classList.toggle('fa-eye', !isPassword);
+    });
+  </script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/auth.js"></script>
+>>>>>>> 8ff0d38 (adding login and register)
 </body>
 </html>

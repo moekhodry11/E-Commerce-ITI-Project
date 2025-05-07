@@ -1,0 +1,63 @@
+{
+  "users": [
+    {
+      "username": "Mohamed",
+      "email": "moe.khodry@gmail.com",
+      "password": "asd123@",
+      "userType": "seller",
+      "id": "3042"
+    },
+    {
+      "username": "asd",
+      "email": "asd@ads.asd",
+      "password": "asd123@",
+      "userType": "customer",
+      "id": "f328"
+    },
+    {
+      "id": "bdb1",
+      "username": "asd",
+      "email": "asd@asd.asd",
+      "password": "asd123@",
+      "userType": "seller"
+    },
+    {
+      "id": "23d9",
+      "username": "moaaz",
+      "email": "moaaz@gmail.com",
+      "password": "moaaz123@",
+      "userType": "seller"
+    },
+    {
+      "id": "af75",
+      "username": "haleem",
+      "email": "haleem@gmail.com",
+      "password": "haleem123@",
+      "userType": "customer"
+    },
+    {
+      "id": "fbd5",
+      "username": "omar",
+      "email": "omar@gmail.com",
+      "password": "omar123@",
+      "userType": "customer"
+    },
+    {
+      "id": "02d4",
+      "username": "asd",
+      "email": "asd@asd.com",
+      "password": "asd123@",
+      "userType": "customer"
+    }
+  ],
+  "products": [
+    {
+      "productName": "Product 1",
+      "price": 10.99,
+      "stock": 100,
+      "description": "This is a description of Product 1.",
+      "imageUrl": "https://via.placeholder.com/150",
+      "id": "4829"
+    }
+  ]
+}

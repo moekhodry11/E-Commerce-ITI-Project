@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 @import url('variables.css');
+=======
+@import url("variables.css");
+>>>>>>> 8ff0d38 (adding login and register)
 
 section {
   min-height: 100vh;
@@ -30,6 +34,12 @@ nav {
   padding: 25px;
   width: 100vw;
   background: rgb(255 255 255 / 50%);
+<<<<<<< HEAD
+=======
+  height: 70px; /* Fixed height for consistency */
+  display: flex;
+  align-items: center; /* Center content vertically */
+>>>>>>> 8ff0d38 (adding login and register)
 }
 
 a {
@@ -223,4 +233,14 @@ input:checked + .slider::before {
 .fas {
   font-size: 30px;
   margin-right: 5px;
+<<<<<<< HEAD
 }
+=======
+}
+
+/* Footer Section */
+footer .social-icons .fab {
+  font-size: 40px;
+  margin: 0 5px;
+}
+>>>>>>> 8ff0d38 (adding login and register)

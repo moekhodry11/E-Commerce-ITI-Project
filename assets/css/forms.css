@@ -1,0 +1,83 @@
+@import url("variables.css");
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: var(--background);
+  box-shadow: var(--box-shadow);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h2 {
+  font-family: Kaushan Script, sans-serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.formLable {
+  font-size: 16px;
+  color: var(--on-background);
+}
+
+.formInput {
+  padding: 10px;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  width: 100%;
+  background-color: var(--on-primary);
+  color: var(--on-background);
+}
+
+.formInput:focus {
+  border-color: var(--secondary-color);
+  outline: none;
+}
+
+.error {
+  color: var(--error-color);
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.form-group select {
+  padding: 10px;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  width: 100%;
+  background-color: var(--on-primary);
+  color: var(--on-background);
+}
+
+.form-group select:focus {
+  border-color: var(--secondary-color);
+  outline: none;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper .fa-eye,
+.password-wrapper .fa-eye-slash {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+}

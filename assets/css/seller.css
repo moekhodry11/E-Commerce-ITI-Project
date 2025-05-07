@@ -1,0 +1,64 @@
+.add-product {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px; /* Adjusted padding for consistency */
+  width: 850px; /* Set fixed width */
+  max-width: 1200px; /* Remove max-width constraint */
+  background: var(--background);
+  box-shadow: var(--box-shadow);
+  border-radius: 10px;
+  color: var(--on-background); /* Ensure text color matches theme */
+}
+
+.add-product h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px; /* Adjusted font size */
+  color: var(--primary-color); /* Match theme primary color */
+}
+
+.product-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Add consistent spacing between form elements */
+}
+
+.product-form label {
+  font-weight: bold;
+  color: var(--on-background); /* Match theme text color */
+}
+
+.product-form input,
+.product-form textarea {
+  padding: 10px;
+  background: var(--background-alt); /* Use alternate background for inputs */
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  font-size: 16px;
+  color: var(--on-background); /* Ensure input text matches theme */
+}
+
+.product-form input:focus,
+.product-form textarea:focus {
+  outline: none;
+  border-color: var(--secondary-color); /* Highlight with secondary color */
+  box-shadow: 0 0 5px var(--secondary-color);
+}
+
+.product-form button {
+  align-self: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background: var(--primary-color);
+  color: var(--on-primary);
+  border: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.product-form button:hover {
+  background: var(--secondary-color); /* Change to secondary color on hover */
+}
