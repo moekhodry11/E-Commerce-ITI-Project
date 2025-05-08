@@ -10,6 +10,40 @@
   margin-bottom: 20px;
 }
 
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#search-input {
+  padding: 5px 10px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px 0 0 5px;
+  width: 100%;
+  font-size: 1rem;
+  color: var(--on-background);
+  background-color: var(--on-primary);
+  margin-right: 5px;
+}
+
+#search-button {
+  padding: 5px 10px;
+  background: var(--primary-color);
+  color: var(--on-primary);
+  border: 1px solid var(--primary-color);
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#search-button:hover {
+  background: var(--secondary-color);
+}
+
 .products-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 products per row */
@@ -18,14 +52,16 @@
 }
 
 .product-card {
-  background: var(--background-alt);
+  background: var(
+    --on-primary
+  ); /* Ensure background is not transparent */
   border: 1px solid var(--secondary-color);
   border-radius: 10px;
   box-shadow: var(--box-shadow);
   padding: 20px;
   text-align: center;
   width: 100%;
-  max-width: 300px;
+  width: 300px;
 }
 
 .product-card img {
@@ -55,6 +91,50 @@
 .product-card .stock {
   font-size: 0.9rem;
   color: var(--on-background-alt);
+}
+
+.cart-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.cart-actions button {
+  padding: 5px 10px;
+  border: 1px solid var(--secondary-color);
+  background: var(--background-alt);
+  color: var(--on-background);
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.cart-actions button:hover {
+  background: var(--secondary-color);
+  color: var(--on-primary);
+}
+
+.cart-actions button i {
+  font-size: 1rem;
+  color: var(--on-background);
+}
+
+.cart-actions button:hover i {
+  color: var(--on-primary);
+}
+
+.cart-actions .quantity {
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 30px; /* Fixed width for consistent alignment */
+  text-align: center; /* Center-align the number */
+}
+
+.cart-actions .decrease-btn i {
+  font-size: 1rem;
+  color: var(--secondary-color);
 }
 
 .pagination {
@@ -87,4 +167,13 @@
 .pagination .page-btn:hover:not(:disabled) {
   background: var(--secondary-color);
   color: var(--on-primary);
+}
+
+.no-results {
+  grid-column: 1 / -1;
+  padding: 20px;
+  font-size: 1.2rem;
+  color: var(--on-background);
+  text-align: center;
+  margin: 30px 0;
 }

@@ -1,13 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Customer</title>
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+  <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/customer.css">
+  <link rel="stylesheet" href="../assets/css/cart.css">
 </head>
+
 <body>
-  <h1>Customer Page</h1>
+  <!-- Dark Mode Switch -->
+  <div class="theme-switch-wrapper">
+    <span id="toggle-icon">
+      <span class="toggle-text">Light Mode</span>
+      <i class="fas fa-sun"></i>
+    </span>
+    <label class="theme-switch">
+      <input type="checkbox">
+      <div class="slider round"></div>
+    </label>
+  </div>
+  <!-- Navigation -->
+  <nav id="nav">
+    <a href="../index.html">HOME</a>
+  </nav>
+
+  <!-- Cart Section -->
+  <div class="cart-container">
+    <h1>Shopping Cart</h1>
+    <div id="cart-items"></div>
+    <div class="cart-summary">
+      <div class="subtotal">
+        <span>Subtotal:</span>
+        <span id="subtotal-value">$0.00</span>
+      </div>
+      <button id="checkout-btn">Checkout</button>
+      <button id="clear-cart-btn">Clear Cart</button>
+    </div>
+    <div id="empty-cart" style="display:none;">
+      <p>Your cart is empty</p>
+      <a href="../index.html">Continue Shopping</a>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
   <script src="../assets/js/customer.js"></script>
+  <script src="../assets/js/cart.js"></script>
+
 </body>
+
 </html>

@@ -59,30 +59,7 @@ a:focus {
   border-bottom: 3px solid;
 }
 
-/* Home Section */
-.title-group {
-  text-align: center;
-}
 
-/* About Section */
-.about-container {
-  display: flex;
-}
-
-.image-container {
-  border: 1px solid var(--secondary-color);
-  border-radius: 10px;
-  padding: 10px 20px;
-  margin-right: 25px;
-  width: auto;
-  background: var(--background);
-  box-shadow: var(--box-shadow);
-}
-
-img {
-  height: 300px;
-  width: 300px;
-}
 
 /* Projects Section */
 .buttons {
@@ -95,7 +72,6 @@ button {
   height: 40px;
   cursor: pointer;
   border-radius: 10px;
-  margin-right: 10px;
   border: 2px solid var(--primary-color);
   font-size: 15px;
   outline: none;
@@ -136,31 +112,11 @@ button:hover:not(.outline) {
   color: var(--on-primary);
 }
 
-.text-box {
-  width: 40%;
-  text-align: justify;
-  background: rgb(0 0 0 / 50%);
-  color: var(--on-primary);
-  border-radius: 10px;
-  padding: 30px;
-}
 
-p {
-  margin: 0;
-  line-height: 25px;
-}
 
-/* Contact Section */
-.fab {
-  font-size: 100px;
-  margin-right: 50px;
-  cursor: pointer;
-  color: var(--primary-color);
-}
 
-.fab:hover {
-  color: var(--on-background);
-}
+
+
 
 /* Dark Mode Toggle */
 .theme-switch-wrapper {
